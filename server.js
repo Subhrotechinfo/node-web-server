@@ -51,6 +51,11 @@ hbs.registerHelper('screamIt' , (text) => {
     return text.toUpperCase();
 });
 
+
+
+
+
+
 app.get('/', ( req , res ) => {
     //res.send('<h1>Hello Express</h1>');
     // res.send({
@@ -77,6 +82,22 @@ app.get('/about', (req,res) => {
     });//render close
 
 });
+
+//projects view
+app.get('/projects', (req,res) => {
+
+    res.render('projects.hbs',{
+      pageTitle:'This is the Projects page',
+      pageDocuments : 'This page is to display the projects'
+    });
+});
+
+
+
+
+
+
+
 
 //handler for bad request
 app.get('/bad', (req,res
